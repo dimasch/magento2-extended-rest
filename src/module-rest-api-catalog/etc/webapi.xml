@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route method="GET" url="/V1/kt/categories">
+		<service class="KT\RestApiCatalog\Api\CategoriesManagementInterface" method="getTree"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/kt/products/attributes/:attributeCode" method="GET">
+		<service class="KT\RestApiCatalog\Api\ProductAttributeRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Magento_Catalog::attributes_attributes" />
+		</resources>
+	</route>
+	<route url="/V1/kt/products/attributes" method="GET">
+		<service class="KT\RestApiCatalog\Api\ProductAttributeRepositoryInterface" method="getList" />
+		<resources>
+			<resource ref="Magento_Catalog::attributes_attributes" />
+		</resources>
+	</route>
+	<route url="/V1/kt/category-information/:id" method="GET">
+		<service class="KT\RestApiCatalog\Api\CategoryInformationInterface" method="getInformation" />
+		<resources>
+			<resource ref="Magento_Catalog::attributes_attributes" />
+		</resources>
+	</route>
+</routes>

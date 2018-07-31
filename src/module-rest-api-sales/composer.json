@@ -1,0 +1,21 @@
+{
+  "name": "kt/module-rest-api-sales",
+  "description": "Extend magento2 Rest Api (Sales)",
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "require": {
+    "magento/module-customer": ">=2.0.12",
+    "magento/module-sales" : ">=2.0.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "KT\\RestApiSales\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}

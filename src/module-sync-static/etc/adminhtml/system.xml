@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="komplizierte" translate="label" sortOrder="500">
+            <label>Komplizierte</label>
+        </tab>
+        <section id="kt_syncstatic" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>SyncStatic</label>
+            <tab>komplizierte</tab>
+            <resource>KT_SyncStatic::configuration</resource>
+            <group id="settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Settings</label>
+                <field id="url" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Url server with port</label>
+                </field>
+                <field id="path_static" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Path for curl static</label>
+                </field>
+                <field id="path_product" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Path for curl product</label>
+                </field>
+                <field id="path_category" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Path for curl category</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

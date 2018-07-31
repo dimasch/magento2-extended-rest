@@ -1,0 +1,37 @@
+{
+    "name": "kt/m2-rest-api",
+    "description": "Extend magento2 Rest Api (Shipping Methods, Swatch images, etc.)",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "minimum-stability": "dev",
+    "replace": {
+        "kt/module-rest-api-catalog": "self.version",
+        "kt/module-rest-api-checkout": "self.version",
+        "kt/module-rest-api-system": "self.version",
+        "kt/module-rest-api-review": "self.version",
+        "kt/module-sync-static": "self.version",
+        "kt/module-rest-api-sales": "self.version"
+    },
+    "autoload": {
+
+        "files": [
+            "src/module-rest-api-catalog/registration.php",
+            "src/module-rest-api-checkout/registration.php",
+            "src/module-rest-api-system/registration.php",
+            "src/module-rest-api-review/registration.php",
+            "src/module-sync-static/registration.php",
+            "src/module-rest-api-sales/registration.php"
+        ],
+        "psr-4": {
+            "KT\\RestApiCatalog\\": "src/module-rest-api-catalog",
+            "KT\\RestApiCheckout\\": "src/module-rest-api-checkout",
+            "KT\\RestApiSystem\\": "src/module-rest-api-system",
+            "KT\\RestApiReview\\": "src/module-rest-api-review",
+            "KT\\SyncStatic\\": "src/module-sync-static",
+            "KT\\RestApiSales\\": "src/module-rest-api-sales"
+        }
+    }
+}

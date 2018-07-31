@@ -1,0 +1,17 @@
+{
+  "name": "kt/module-sync-static",
+  "description": "Execute curl query on event cache clear (flush)",
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "psr-4": {
+      "KT\\SyncStatic\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}

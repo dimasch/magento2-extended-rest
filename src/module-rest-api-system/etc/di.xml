@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2018. Komplizierte Technologien. All rights reserved.
+  ~ See COPYING.txt for license details.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="KT\RestApiSystem\Api\CoreConfigManagementInterface" type="KT\RestApiSystem\Model\CoreConfigManagement"/>
+    <preference for="KT\RestApiSystem\Api\UrlRewriteManagementInterface" type="KT\RestApiSystem\Model\UrlRewriteManagement"/>
+    <preference for="KT\RestApiSystem\Api\Data\UrlRewriteSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+    <preference for="KT\RestApiSystem\Api\UrlRewriteInterface" type="KT\RestApiSystem\Model\UrlRewrite" />
+</config>

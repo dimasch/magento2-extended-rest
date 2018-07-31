@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!--
+  ~ Copyright (c) 2018. Komplizierte Technologien. All rights reserved.
+  ~ See COPYING.txt for license details.
+  -->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/kt/core-config" method="GET">
+		<service class="KT\RestApiSystem\Api\CoreConfigManagementInterface" method="getList"/>
+		<resources>
+			<resource ref="Magento_Config::config" />
+		</resources>
+	</route>
+	<route url="/V1/kt/core-config/tree" method="GET">
+		<service class="KT\RestApiSystem\Api\CoreConfigManagementInterface" method="getTree"/>
+		<resources>
+			<resource ref="Magento_Config::config" />
+		</resources>
+	</route>
+	<route url="/V1/kt/core-config/:key" method="GET">
+		<service class="KT\RestApiSystem\Api\CoreConfigManagementInterface" method="getByKey"/>
+		<resources>
+			<resource ref="Magento_Config::config" />
+		</resources>
+	</route>
+	<route url="/V1/kt/url-rewrite" method="GET">
+		<service class="KT\RestApiSystem\Api\UrlRewriteManagementInterface" method="getList"/>
+		<resources>
+			<resource ref="Magento_Config::config" />
+		</resources>
+	</route>
+</routes>

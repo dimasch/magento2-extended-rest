@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <kt_syncstatic>
+            <settings>
+                <url>localhost:8081</url>
+                <path_static>/syncstatic/flush</path_static>
+                <path_product>/magento/products/pull</path_product>
+                <path_category>/categories/flush</path_category>
+            </settings>
+        </kt_syncstatic>
+    </default>
+</config>

@@ -1,0 +1,22 @@
+{
+  "name": "kt/module-rest-api-catalog",
+  "description": "Extend magento2 Rest Api (Catalog)",
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "require": {
+    "magento/module-catalog": ">=2.1.4",
+    "magento/module-cms" : ">=2.0.1",
+    "magento/module-eav" : ">=2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "KT\\RestApiCatalog\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}

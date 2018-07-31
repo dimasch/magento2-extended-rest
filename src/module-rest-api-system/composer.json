@@ -1,0 +1,17 @@
+{
+  "name": "kt/module-rest-api-system",
+  "description": "Extend magento2 Rest Api (System)",
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "psr-4": {
+      "KT\\RestApiSystem\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}

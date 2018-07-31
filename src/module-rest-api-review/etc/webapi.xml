@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!--
+  ~ Copyright (c) 2018. Komplizierte Technologien. All rights reserved.
+  ~ See COPYING.txt for license details.
+  -->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/kt/reviews/" method="GET">
+		<service class="KT\RestApiReview\Api\ReviewRepositoryInterface" method="getList" />
+		<resources>
+			<resource ref="Magento_Catalog::attributes_attributes" />
+		</resources>
+	</route>
+	<route url="/V1/kt/reviews/:id" method="GET">
+		<service class="KT\RestApiReview\Api\ReviewRepositoryInterface" method="get" />
+		<resources>
+			<resource ref="Magento_Catalog::attributes_attributes" />
+		</resources>
+	</route>
+	<route url="/V1/kt/reviews/product/:id" method="GET">
+		<service class="KT\RestApiReview\Api\ReviewManagementInterface" method="getProductReviews" />
+		<resources>
+			<resource ref="Magento_Catalog::attributes_attributes" />
+		</resources>
+	</route>
+	<route url="/V1/kt/reviews/product/:id" method="POST">
+		<service class="KT\RestApiReview\Api\ReviewManagementInterface" method="addProductReview" />
+		<resources>
+			<resource ref="Magento_Catalog::attributes_attributes" />
+		</resources>
+		<data>
+			<parameter name="id">%id%</parameter>
+		</data>
+	</route>
+</routes>

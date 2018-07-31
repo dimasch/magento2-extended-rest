@@ -1,0 +1,17 @@
+{
+  "name": "kt/module-rest-api-checkout",
+  "description": "Extend magento2 Rest Api (Checkout)",
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "psr-4": {
+      "KT\\RestApiCheckout\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}

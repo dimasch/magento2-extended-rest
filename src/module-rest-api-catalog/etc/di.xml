@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="KT\RestApiCatalog\Api\CategoriesManagementInterface" type="KT\RestApiCatalog\Model\CategoriesManagement"/>
+	<preference for="Magento\Catalog\Model\Category\Tree" type="KT\RestApiCatalog\Model\Category\Tree" />
+
+	<preference for="KT\RestApiCatalog\Api\Data\CategoryTreeInterface" type="KT\RestApiCatalog\Model\Category"/>
+	<preference for="Magento\Catalog\Model\Category" type="KT\RestApiCatalog\Model\Category" />
+
+	<preference for="Magento\Catalog\Model\CategoryRepository" type="KT\RestApiCatalog\Model\CategoryRepository" />
+
+	<preference for="KT\RestApiCatalog\Api\Data\ProductSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+
+	<preference for="KT\RestApiCatalog\Api\ProductRepositoryInterface" type="KT\RestApiCatalog\Model\ProductRepository"/>
+	<preference for="Magento\Catalog\Model\ProductRepository" type="KT\RestApiCatalog\Model\ProductRepository" />
+
+	<type name="Magento\ConfigurableProduct\Model\LinkManagement">
+		<plugin name="KT_RestApiCatalog_Plugin_Magento_ConfigurableProduct_Model_LinkManagement"
+			type="KT\RestApiCatalog\Plugin\Model\LinkManagement"/>
+	</type>
+
+	<preference for="KT\RestApiCatalog\Api\Data\ProductInterface" type="KT\RestApiCatalog\Model\Product"/>
+	<preference for="Magento\Catalog\Model\Product" type="KT\RestApiCatalog\Model\Product" />
+
+	<type name="Magento\Catalog\Model\Product\Attribute\Repository">
+		<plugin name="KT_RestApiCatalog_Plugin_Model_Product_Attribute_Repository"
+				type="KT\RestApiCatalog\Plugin\Model\Product\Attribute\Repository"/>
+	</type>
+
+    <type name="Magento\Catalog\Model\ProductRepository">
+        <plugin name="KT_RestApiCatalog_Plugin_Magento_Catalog_Model_ProductRepository"
+                type="KT\RestApiCatalog\Plugin\Magento\Catalog\Model\ProductRepository" />
+    </type>
+
+	<preference for="KT\RestApiCatalog\Api\Data\AttributeOptionInterface" type="KT\RestApiCatalog\Model\Entity\Attribute\Option" />
+	<preference for="Magento\Eav\Model\Entity\Attribute\Option" type="KT\RestApiCatalog\Model\Entity\Attribute\Option" />
+	<preference for="KT\RestApiCatalog\Api\Data\ProductAttributeInterface" type="KT\RestApiCatalog\Model\ResourceModel\Eav\Attribute" />
+	<preference for="Magento\Catalog\Model\ResourceModel\Eav\Attribute" type="KT\RestApiCatalog\Model\ResourceModel\Eav\Attribute" />
+	<preference for="KT\RestApiCatalog\Api\ProductAttributeRepositoryInterface" type="Magento\Catalog\Model\Product\Attribute\Repository" />
+	<preference for="KT\RestApiCatalog\Api\Data\ProductAttributeSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+
+	<type name="Magento\Cms\Model\BlockRepository">
+		<plugin name="KT_RestApiCatalog_Plugin_Model_BlockRepository"
+				type="KT\RestApiCatalog\Plugin\Model\BlockRepository"/>
+	</type>
+	<type name="Magento\Cms\Model\PageRepository">
+		<plugin name="KT_RestApiCatalog_Plugin_Model_PageRepository"
+				type="KT\RestApiCatalog\Plugin\Model\PageRepository"/>
+	</type>
+
+	<preference for="KT\RestApiCatalog\Api\CategoryInformationInterface" type="KT\RestApiCatalog\Model\CategoryInformation"/>
+
+</config>

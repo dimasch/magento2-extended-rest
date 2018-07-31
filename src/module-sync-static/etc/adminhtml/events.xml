@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="adminhtml_cache_flush_system">
+        <observer name="kt_sync-static_cache_flush_system"
+                  instance="KT\SyncStatic\Observer\Adminhtml\CacheFlushSystem"/>
+    </event>
+    <event name="controller_action_catalog_product_save_entity_after">
+        <observer name="kt_sync-static_save_entity_after"
+                  instance="KT\SyncStatic\Observer\Adminhtml\Product\Save"/>
+    </event>
+    <event name="catalog_category_prepare_save">
+        <observer name="kt_sync-static_category_prepare_save"
+                  instance="KT\SyncStatic\Observer\Adminhtml\Category\Save"/>
+    </event>
+</config>
