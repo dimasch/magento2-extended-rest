@@ -2,8 +2,6 @@
 
 <h2>New hotpoints for Rest Api</h2>
 
-GET /V1/kt/categories - будет удален!!! Deprecated.
-
 GET /V1/kt/shippingmethods
 
 <h2>Edit hotpoint for Rest Api</h2>
